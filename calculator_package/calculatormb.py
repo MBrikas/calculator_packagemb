@@ -1,41 +1,41 @@
 class Calculator:
-    ''' This is a calculator that can perform basic arithmetic operations and take roots.
-    The calculator maintains its own memory to store the result of previous operations. '''
+    ''' This calculator is designed to carry out fundamental arithmetic operations and calculate roots.
+    It comes equipped with a memory feature, allowing it to store previous calculation results '''
 
     def __init__(self):
-        ''' This function initializes the Calculator with an initial memory value of 0. '''
+        ''' This function sets up the Calculator with an initial memory value of 0 '''
         self.memory = 0
 
     def add(self, num):
-        ''' It adds a number from the current memory value. '''
+        ''' It increments the current memory value by a given number. '''
         self.memory += num
         return self.memory
 
     def subtract(self, num):
-        ''' It Subtracts a number from the current memory value. '''
+        ''' It subtracts a given number from the current memory value. '''
         self.memory -= num
         return self.memory
 
     def multiply(self, num):
-        ''' This function multiplies the current memory value by a number. '''
+        ''' This function multiplies the current memory value by a given number '''
         self.memory *= num
         return self.memory
 
     def divide(self, num):
-        ''' This function divides the current memory value by a number. '''
+        ''' This function divides the current memory value by a given number.. '''
         if num != 0:
             self.memory /= num
             return self.memory
         else:
-            raise ValueError("Cannot divide by zero!")
+            raise ValueError("Division by zero is not allowed!")
 
     def root(self, n):
-        ''' This function takes the nth root of the current memory value. '''
+        ''' This function calculates the nth root of the current memory value. '''
         if n >= 0:
             self.memory = round(self.memory ** (1 / n),3)
             return self.memory
         else:
-            raise ValueError("Cannot calculate negative root!")
+            raise ValueError("Calculating a negative root is not possible!")
 
     def reset_memory(self):
         ''' Reset the calculator's memory to zero. '''
@@ -56,16 +56,16 @@ if __name__ == "__main__":
 
     while True:
         print(f"\nMemory: {calculator.memory}")
-        print("Options:")
-        print("1. Add")
-        print("2. Subtract")
-        print("3. Multiply")
-        print("4. Divide")
-        print("5. Take Root")
+        print("Available choices:")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
+        print("5. Calculate Root")
         print("6. Reset Memory")
         print("7. Exit")
 
-        choice = input("Enter your choice (1-7): ")
+        choice = input("Please enter your selection (1-7): ")
 
         if choice == '1':
             num = float(input("Enter a number: "))
@@ -95,4 +95,4 @@ if __name__ == "__main__":
             print("Exiting...")
             break
         else:
-            print("Invalid choice. Please choose a valid option.")
+            print("Invalid selection. Please choose a valid option.")

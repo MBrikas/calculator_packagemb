@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "calculatormb"
-version = "0.0.2"
+version = "0.0.5"
 authors = [
   { name="Mazvydas Brikas", email="m_brikas@yahoo.com" },
 ]
@@ -18,5 +18,4 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/pypa/sampleproject"
-"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+"Homepage" = "https://github.com/TuringCollegeSubmissions/mabrika-DWWP.1.git"
